@@ -1,7 +1,7 @@
 # Author: Éder Augusto Penharbel
 
 .PHONY: clean image
-SOURCE = arqe05
+SOURCE = arqe06
 
 all: image
 
