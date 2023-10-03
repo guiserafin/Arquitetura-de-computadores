@@ -31,16 +31,6 @@ loopLeitura:
 
     jmp loopLeitura
 
-    # Converte para ASCII
-    # add $0x30 , %al
-
-    # cmp $0x3a, %al
-    # je final
-
-    # Imprime o valor do al
-    # int $0x10
-    # jmp _start
-
 loop:
     movb %al , (%bx)
     incb %al

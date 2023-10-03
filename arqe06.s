@@ -16,7 +16,7 @@ _start:
     
     call compara
 
-# 
+# Compara pra verificar se o numero em bx ja se igualou ao ax
 compara:
 
     cmp %bx, %ax
@@ -26,19 +26,22 @@ compara:
 
 # Faz a impressão e incrementa o valor do ax
 continua:
-# newline = 0x04
-
 
     movb $0xe , %ah
     int $0x10
 
     #
-    # movw %ax , %cx
+    movw %ax , %cx
 
-    # movb $0x04 , %ah
-    # int $0x10
+    movb $0x0a , %al
+    int $0x10
+    movb $0x00 , %al
 
-    # movw %cx, %ax
+    movb $0x08 , %al
+    int $0x010
+    movb $0x00, %al
+
+    movw %cx, %ax
 
     #
     incw %ax
@@ -47,8 +50,6 @@ continua:
 
 final:
 
-    # movb $'.' , %ah
-    # int $0x16
     movb $0xe , %ah
     int $0x10
 
